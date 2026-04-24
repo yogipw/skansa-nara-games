@@ -127,15 +127,15 @@ const RANKS = [
 
 const NARA_COMMENTS = {
   start: ['Yayyy gaspol! Kamu bisa! 🔥','Ready to slay this quiz? 😤','Bismillah, kita bisa! ✊'],
-  correct: ['YASS! Kamu beneran pinter sih! 🤩','Gilak bener!! Top banget! 💯','Nailed it bestie! Bangga sama kamu! 🌟','Wiiih gila benerrr! 🔥','Auto sultan kalau soal ini! 😤','Skrrttt!! Jawaban dewa! ⚡'],
+  correct: ['YASS! Kamu beneran pinter sih! 🤩','Gilak bener!! Top banget! 💯','Nailed it! Bangga sama kamu! 🌟','Wiiih gila benerrr! 🔥','Auto sultan kalau soal ini! 😤','Skrrttt!! Jawaban dewa! ⚡'],
   wrong: ['Eh salah sih, tapi gapapa ya! 💪','Yaah, next soal pasti bisa bestie! 😊','Hayuk baca faktanya dulu hehe 📖','Tenang, dari sini kita belajar! 🌸','Gak masalah, tetep glow up! ✨','Sedikit salah, tapi masih W! 🫶'],
-  nearMiss: ['Hmm hampir! Dikit lagi bestie! 😅','Close call! Next pasti dapet! 😄','Tipis banget salahnya wkwkw 🤏'],
-  streak3: ['STREAK 3 BESTIE!! YOU\'RE INSANE! 🔥🔥','3 berturut! Siapa yang bisa ngalahin lo?! 😤','TRIPLE KILL! Gamer mode ON! 🎮'],
+  nearMiss: ['Hmm hampir! Dikit lagi coy! 😅','Close call! Next pasti dapet! 😄','Tipis banget salahnya wkwkw 🤏'],
+  streak3: ['STREAK 3 BRE!! YOU\'RE INSANE! 🔥🔥','3 berturut! Siapa yang bisa ngalahin lo?! 😤','TRIPLE KILL! Gamer mode ON! 🎮'],
   streak5: ['STREAK 5 BROLLL!! 🤯','NGERI PARAH!! 5 STREAK?! LEGIT BEAST! 🏆','ABSOLUTE UNIT! STREAK 5! 🌋'],
-  streakBreak: ['ADUH! Streak kabur! 😱','Yaaaaah streak-nya pergi liburan 😭','Hufft ntar sambung lagi ya bestie! 😤'],
+  streakBreak: ['ADUH! Streak kabur! 😱','Yaaaaah streak-nya pergi liburan 😭','Hufft ntar sambung lagi ya couy! 😤'],
   minigame: ['Gas! Ini saatnya jadi fakta checker! 🎯','Fokus fokus fokus! Nara percaya kamu! ⚡','Mode detektif: ON! 🕵️'],
   mgCorrect: ['Faktanya ada di kepalamu! 🧠','Kamu tidak bisa dibohongi! 🛡️','Big brain moment! 💡'],
-  mgWrong: ['Itu jebakan bestie! Baca faktanya! 😅','Next kamu pasti lebih kritis! 📖'],
+  mgWrong: ['Itu jebakan kawan! Baca faktanya! 😅','Next kamu pasti lebih kritis! 📖'],
   mgTimeout: ['Wah kehabisan waktu! Baca faktanya ya! ⏰','Jangan panik, baca dulu faktanya! 📖'],
   win: ['JUARA!! SMK 1 Kongbeng bangga banget! 🏆🎊','INCREDIBLE!! Garda anti-narkotika dari Kaltim! 🦸','CHAMPION! Indonesia butuh generasi siaga kayak kamu! 🇮🇩'],
   lose: ['Belum max score, tapi udah berani! 💪','Belajar lagi yuk, kamu pasti bisa! 📚','Perjalanan ribuan langkah dimulai dari sini! 🌟'],
@@ -1032,7 +1032,7 @@ function onAllMgAnswered(mgRoundScore, items) {
   const recapBox = document.getElementById('mg-recap-box');
   const pct = Math.round((mgRoundScore/20)*100);
   const recapEmoji = pct>=75 ? '🎉' : pct>=50 ? '👍' : '💪';
-  recapBox.innerHTML = `<span style="font-size:18px">${recapEmoji}</span> <strong>Nara says:</strong> ${pct>=75 ? 'Wow kamu kritis banget! '+mgRoundScore+' dari 20 poin! 🔥' : pct>=50 ? 'Lumayan bestie! '+mgRoundScore+'/20 poin. Belajar lagi ya! 😊' : 'Gapapa '+mgRoundScore+'/20, yang penting udah nyoba! 💪 Baca faktanya ya!'}`;
+  recapBox.innerHTML = `<span style="font-size:18px">${recapEmoji}</span> <strong>Nara says:</strong> ${pct>=75 ? 'Wow kamu kritis banget! '+mgRoundScore+' dari 20 poin! 🔥' : pct>=50 ? 'Lumayan lahh! '+mgRoundScore+'/20 poin. Belajar lagi ya! 😊' : 'Gapapa '+mgRoundScore+'/20, yang penting udah nyoba! 💪 Baca faktanya ya!'}`;
   recapBox.style.display = 'block';
   recapBox.classList.add('show');
   document.getElementById('mg-next-btn').style.display = 'block';
