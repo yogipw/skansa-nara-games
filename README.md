@@ -1,26 +1,27 @@
 # Skansa Nara Games
 
-Game edukasi interaktif bertema anti-narkoba untuk siswa, dikemas dengan gaya visual cerah, nuansa gamification, dan alur belajar yang ringan tetapi tetap serius pada isi materinya.
+Game edukasi interaktif bertema siaga narkotika untuk siswa, dikemas dengan gaya visual cerah, nuansa gamification, dan alur belajar yang ringan tetapi tetap serius pada isi materinya.
 
 Project ini menampilkan pengalaman belajar berbasis web untuk:
 
-- mengenalkan fakta penting tentang bahaya narkoba
+- mengenalkan fakta penting tentang narkotika sebagai fokus utama
 - mengajak siswa memahami dampak sosial, hukum, dan kesehatan
 - melatih pengambilan keputusan lewat kuis dan mini game
+- membekali langkah aman saat melapor ke polisi atau pihak sekolah
 - memberi hasil akhir yang menarik lengkap dengan rank, statistik, dan sertifikat digital
 
 ## Gambaran Singkat
 
-`Narkoba Quest v2 — SMK 1 Kongbeng` adalah game satu halaman yang dirancang untuk pembelajaran sekolah. Pemain memasukkan nama, membaca fakta dan tips, menjawab kuis, bermain mini game, lalu menerima hasil akhir berupa skor, badge rank, dan sertifikat.
+`Narkotika Quest v3 — SMK 1 Kongbeng` adalah game satu halaman yang dirancang untuk pembelajaran sekolah. Pemain memasukkan nama, membaca fakta dan tips, menjawab kuis, bermain mini game, lalu menerima hasil akhir berupa skor, badge rank, dan sertifikat.
 
 Karakter utama pengalaman ini adalah **Nara**, maskot pendamping yang memberi komentar, semangat, dan nuansa interaktif sepanjang permainan.
 
 ## Fitur Utama
 
 - Halaman pembuka dengan identitas sekolah dan input nama pemain
-- Story facts interaktif tentang narkoba, dampak, dan pencegahan
+- Story facts interaktif tentang narkotika, dampak, pencegahan, dan pelaporan
 - Kuis multi-bab dengan efek visual, streak, dan progres
-- Mini game `Mitos atau Fakta?` dengan timer
+- Mini game `Mitos atau Fakta?` dengan timer 60 detik
 - Sistem rank dari `PEMULA BERANI` sampai `LEGENDA`
 - Halaman hasil yang menampilkan:
   - akurasi per bab
@@ -36,11 +37,12 @@ Karakter utama pengalaman ini adalah **Nara**, maskot pendamping yang memberi ko
 ## Alur Permainan
 
 1. Pemain memasukkan nama di halaman awal.
-2. Pemain membaca fakta-fakta inti tentang narkoba.
+2. Pemain membaca fakta-fakta inti tentang narkotika dan istilah turunannya.
 3. Pemain masuk ke kuis utama per bab.
 4. Pemain menjalani mini game cepat `Mitos atau Fakta?`.
-5. Sistem menghitung skor, streak, akurasi, dan rank.
-6. Halaman hasil menampilkan performa akhir dan sertifikat.
+5. Pemain belajar bab akhir tentang pelaporan aman ke polisi.
+6. Sistem menghitung skor, streak, akurasi, dan rank.
+7. Halaman hasil menampilkan performa akhir dan sertifikat.
 
 ## Teknologi
 
@@ -91,6 +93,7 @@ Bagian yang paling mudah disesuaikan:
 - daftar fakta dan tips edukatif
 - soal kuis dan jawaban
 - mini game
+- alur pelaporan dan kontak darurat
 - kutipan hasil akhir
 - warna tema dan rank
 - teks sertifikat
@@ -117,7 +120,7 @@ Beberapa elemen yang jadi kekuatan project ini:
 ## Cocok Untuk
 
 - media pembelajaran sekolah
-- presentasi edukasi anti-narkoba
+- presentasi edukasi narkotika di sekolah
 - kampanye siswa / OSIS / BK
 - lomba atau showcase web interaktif edukatif
 - project portfolio frontend berbasis vanilla web
@@ -136,16 +139,16 @@ Beberapa ide pengembangan lanjutan:
 
 ## Pesan Edukasi
 
-Isi project ini membawa pesan utama bahwa pencegahan narkoba bukan hanya soal larangan, tetapi soal:
+Isi project ini membawa pesan utama bahwa pencegahan narkotika bukan hanya soal larangan, tetapi soal:
 
 - keberanian mengambil keputusan
 - kemampuan menolak tekanan teman sebaya
-- pemahaman dampak nyata narkoba
-- keberanian mencari bantuan saat dibutuhkan
+- pemahaman dampak nyata narkotika
+- keberanian mencari bantuan dan melapor saat dibutuhkan
 
 ## Kredit
 
-Dibuat untuk pengalaman edukasi bertema anti-narkoba dengan identitas:
+Dibuat untuk pengalaman edukasi bertema siaga narkotika dengan identitas:
 
 - **SMK Negeri 1 Kongbeng**
 - maskot pendamping: **Nara**

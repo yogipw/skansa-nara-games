@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Narkoba Quest v2 — SMK 1 Kongbeng</title>
+<title>Narkotika Quest v3 — SMK 1 Kongbeng</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -38,6 +38,7 @@ body {
 body.ch1-bg { --bg-chapter: #FFF5FB; }
 body.ch2-bg { --bg-chapter: #FFF5F5; }
 body.ch3-bg { --bg-chapter: #F5FFF8; }
+body.ch4-bg { --bg-chapter: #EEF8FF; }
 body.mg-bg  { --bg-chapter: #FFFBF0; }
 body { background: var(--bg-chapter); }
 
@@ -327,6 +328,7 @@ body { background: var(--bg-chapter); }
 .ch1 { background:#F0E6FF;color:var(--purple); }
 .ch2 { background:#FFE8E8;color:var(--red); }
 .ch3 { background:#E8FFF0;color:var(--green); }
+.ch4 { background:#E8F7FF;color:#1E88E5; }
 .question-emoji { font-size:64px;text-align:center;display:block;margin-bottom:12px;animation:emoji-pop 0.5s cubic-bezier(0.34,1.56,0.64,1); }
 @keyframes emoji-pop { 0%{transform:scale(0)} 70%{transform:scale(1.2)} 100%{transform:scale(1)} }
 .question-text {
@@ -926,19 +928,19 @@ body { background: var(--bg-chapter); }
     <span class="school-logo-emoji">🏫</span>
     <div class="school-banner-text">
       <div class="school-name">SMK Negeri 1 Kongbeng</div>
-      <div class="school-tagline">Generasi Bebas Narkoba 💪</div>
+      <div class="school-tagline">Generasi Siaga Narkotika 💪</div>
     </div>
     <span class="school-badge-sm">KALTIM</span>
   </div>
   <div class="card">
     <div class="logo-area">
       <span class="mascot-wrap" id="welcome-mascot">🦸</span>
-      <h1 class="game-title">Narkoba<br>Quest!</h1>
-      <p class="game-subtitle">Quiz Edukasi Anti-Narkoba 🛡️ v2.0</p>
+      <h1 class="game-title">Narkotika<br>Quest!</h1>
+      <p class="game-subtitle">Quiz Edukasi Narkotika, Pencegahan, dan Pelaporan 🚓 v3.0</p>
     </div>
     <input class="name-input" id="player-name" type="text" placeholder="✏️ Nama kamu (opsional)" maxlength="20">
     <button class="btn btn-primary" onclick="startGame()">🚀 Mulai Petualangan!</button>
-    <div style="margin-top:10px;text-align:center;font-size:12px;color:var(--muted);font-weight:700">12 soal seru • 3 bab • 2× mini game Mitos/Fakta!</div>
+    <div style="margin-top:10px;text-align:center;font-size:12px;color:var(--muted);font-weight:700">16 soal seru • 4 bab • 2× mini game Mitos/Fakta!</div>
     <div style="margin-top:6px;text-align:center;font-size:11px;color:var(--purple);font-weight:800">🎵 Aktifkan volume untuk musik & efek suara!</div>
   </div>
 </div>
@@ -986,12 +988,12 @@ body { background: var(--bg-chapter); }
   <div class="quiz-header">
     <div class="score-chip">⭐ <span id="score-display">0</span></div>
     <div class="progress-wrap"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
-    <div class="question-num" id="q-num">1/12</div>
+    <div class="question-num" id="q-num">1/16</div>
     <div class="streak-chip">🔥 <span id="streak-display">0</span></div>
   </div>
   <div class="card" id="quiz-card">
     <div id="nara-card-comment"><span class="nc-emoji">🦸</span><span id="nara-card-text">Yuk gasss! 🔥</span></div>
-    <span class="chapter-badge ch1" id="chapter-badge">Bab 1 — Mengenal Narkoba</span>
+    <span class="chapter-badge ch1" id="chapter-badge">Bab 1 — Mengenal Narkotika</span>
     <span class="question-emoji" id="question-emoji">💊</span>
     <div class="question-text" id="question-text">Loading...</div>
     <div id="nara-hint-box"><span>💡</span><span id="nara-hint-text"></span></div>
@@ -1037,7 +1039,7 @@ body { background: var(--bg-chapter); }
         <div class="cert-header">
           <div class="cert-school">🏫 SMK NEGERI 1 KONGBENG</div>
           <div class="cert-school-sub">Kabupaten Kutai Timur — Kalimantan Timur</div>
-          <div class="cert-title">Sertifikat Digital — Narkoba Quest</div>
+          <div class="cert-title">Sertifikat Digital — Narkotika Quest</div>
         </div>
         <hr class="cert-divider">
         <div style="font-size:10px;color:rgba(255,255,255,0.6);text-align:center;font-weight:700;margin-bottom:2px">DIBERIKAN KEPADA</div>
@@ -1047,8 +1049,8 @@ body { background: var(--bg-chapter); }
           <div class="cert-score-item"><div class="cert-score-val" id="cert-acc">0%</div><div class="cert-score-lbl">AKURASI</div></div>
           <div class="cert-score-item"><div class="cert-score-val" id="cert-streak">0</div><div class="cert-score-lbl">STREAK</div></div>
         </div>
-        <div class="cert-rank"><div class="cert-rank-text" id="cert-rank-text">🦸 PAHLAWAN ANTI-NARKOBA</div></div>
-        <div class="cert-footer">Generasi Bebas Narkoba 🇮🇩 | NarkobaQuest v2.0</div>
+        <div class="cert-rank"><div class="cert-rank-text" id="cert-rank-text">🦸 GARDA ANTI-NARKOTIKA</div></div>
+        <div class="cert-footer">Generasi Siaga Narkotika 🇮🇩 | NarkotikaQuest v3.0</div>
       </div>
       <div class="cert-hint">📸 Screenshot sertifikat ini untuk kenang-kenangan!</div>
     </div>
@@ -1066,17 +1068,18 @@ body { background: var(--bg-chapter); }
 
         <span class="result-mascot" id="result-mascot">🏆</span>
         <div class="result-title" id="result-title">Luar Biasa!</div>
-        <div class="result-category" id="result-category">Pahlawan Anti-Narkoba</div>
+        <div class="result-category" id="result-category">Garda Anti-Narkotika</div>
         <div class="rank-badge" id="rank-badge">
           <span class="rank-icon" id="rank-icon">🏆</span>
-          <div class="rank-label" id="rank-label">PAHLAWAN</div>
-          <div class="rank-sub" id="rank-sub">Anti-Narkoba Sejati!</div>
+          <div class="rank-label" id="rank-label">GARDA</div>
+          <div class="rank-sub" id="rank-sub">Pelindung Anti-Narkotika!</div>
         </div>
         <div class="chapter-chart">
           <div class="chapter-chart-title">📊 Akurasi per Bab</div>
           <div class="ch-bar-row"><span class="ch-bar-label">Bab 1 🧠</span><div class="ch-bar-track"><div class="ch-bar-fill" id="ch1-bar" style="width:0%;background:var(--purple)"></div></div><span class="ch-bar-pct" id="ch1-pct">0%</span></div>
-          <div class="ch-bar-row"><span class="ch-bar-label">Bab 2 ⚠️</span><div class="ch-bar-track"><div class="ch-bar-fill" id="ch2-bar" style="width:0%;background:var(--red)"></div></div><span class="ch-bar-pct" id="ch2-pct">0%</span></div>
+          <div class="ch-bar-row"><span class="ch-bar-label">Bab 2 ⚖️</span><div class="ch-bar-track"><div class="ch-bar-fill" id="ch2-bar" style="width:0%;background:var(--red)"></div></div><span class="ch-bar-pct" id="ch2-pct">0%</span></div>
           <div class="ch-bar-row"><span class="ch-bar-label">Bab 3 🛡️</span><div class="ch-bar-track"><div class="ch-bar-fill" id="ch3-bar" style="width:0%;background:var(--green)"></div></div><span class="ch-bar-pct" id="ch3-pct">0%</span></div>
+          <div class="ch-bar-row"><span class="ch-bar-label">Bab 4 🚓</span><div class="ch-bar-track"><div class="ch-bar-fill" id="ch4-bar" style="width:0%;background:var(--cyan)"></div></div><span class="ch-bar-pct" id="ch4-pct">0%</span></div>
         </div>
         <div class="stats-grid">
           <div class="stat-box"><span class="stat-val" id="stat-accuracy">0%</span><span class="stat-label">Akurasi Total</span></div>
@@ -1084,8 +1087,8 @@ body { background: var(--bg-chapter); }
           <div class="stat-box"><span class="stat-val" id="stat-correct">0</span><span class="stat-label">Jawaban Benar</span></div>
           <div class="stat-box"><span class="stat-val" id="stat-wrong">0</span><span class="stat-label">Jawaban Salah</span></div>
         </div>
-        <div class="big-score"><span class="score-number" id="final-score">0</span><span class="score-max"> / 200</span></div>
-        <div class="anti-quote" id="anti-quote">"Hidupmu terlalu berharga untuk dirusak narkoba." 🌟</div>
+        <div class="big-score"><span class="score-number" id="final-score">0</span><span class="score-max"> poin</span></div>
+        <div class="anti-quote" id="anti-quote">"Paham narkotika sejak awal adalah bentuk menjaga masa depan." 🌟</div>
         <div class="result-insight-panel">
           <div class="result-insight-title">✨ Highlight Pencapaian</div>
           <div class="result-highlights" id="result-highlights"></div>
@@ -1093,13 +1096,13 @@ body { background: var(--bg-chapter); }
         <div class="next-step-card">
           <div class="next-step-kicker">Langkah Selanjutnya</div>
           <div class="next-step-title" id="next-step-title">Misi kamu baru dimulai</div>
-          <div class="next-step-text" id="next-step-text">Jaga hasil ini, bagikan energi baikmu, dan bantu teman lain makin paham bahaya narkoba.</div>
+          <div class="next-step-text" id="next-step-text">Jaga hasil ini, bagikan energi baikmu, dan bantu teman lain makin paham bahaya narkotika serta cara melapor dengan aman.</div>
         </div>
         <div class="result-btns">
           <button class="btn btn-wa" onclick="shareWA()">📱 Bagikan ke WhatsApp</button>
           <button class="btn btn-primary" onclick="restartGame()">🔄 Main Lagi!</button>
         </div>
-        <div style="margin-top:10px;text-align:center;font-size:11px;color:var(--muted);font-weight:700">SMK Negeri 1 Kongbeng — Generasi Bebas Narkoba 💪</div>
+        <div style="margin-top:10px;text-align:center;font-size:11px;color:var(--muted);font-weight:700">SMK Negeri 1 Kongbeng — Generasi Siaga Narkotika 💪</div>
       </div>
     </div>
 
@@ -1110,40 +1113,40 @@ body { background: var(--bg-chapter); }
 // ===== DATA =====
 const FACTS = [
   {
-    icon:'🧠', title:'Narkoba Merusak Otak Selamanya',
-    stat:'8 poin IQ', statContext:'hilang permanen menurut riset Harvard',
-    text:'Zat adiktif mengubah struktur otak secara permanen. Penggunaan ganja saat remaja menurunkan IQ rata-rata <span class="story-card-stat">8 poin</span> secara permanen karena otak remaja masih berkembang hingga usia 25 tahun.',
+    icon:'🧠', title:'Narkotika Bisa Mengubah Otak Remaja',
+    stat:'8 poin IQ', statContext:'bisa hilang permanen bila dipakai saat remaja',
+    text:'Narkotika seperti ganja dan sabu dapat mengganggu perkembangan otak yang belum matang. Pada usia sekolah, kerusakannya bisa memukul memori, konsentrasi, dan kontrol diri untuk jangka panjang.',
     color:'#9B59FF', emoji:'🧬'
   },
   {
-    icon:'📊', title:'Fakta Indonesia 2023',
-    stat:'3,6 Juta', statContext:'pengguna narkoba di Indonesia',
-    text:'BNN mencatat <span class="story-card-stat">3,6 juta</span> pengguna narkoba di Indonesia. Yang mengkhawatirkan: <span class="story-card-stat">27%</span> adalah pelajar dan mahasiswa berusia 15–24 tahun — seusia kamu!',
-    color:'#FF6B9D', emoji:'📈'
+    icon:'⚗️', title:'Narkotika Golongan I Bukan Bahan Coba-Coba',
+    stat:'Golongan I', statContext:'berisiko sangat tinggi disalahgunakan',
+    text:'Heroin, kokain, dan ganja termasuk contoh narkotika golongan I. Zat ini diawasi sangat ketat karena potensi ketergantungan dan kerusakannya tinggi. Istilah <span class="story-card-stat">narkoba</span> memang lebih luas, tetapi materi ini fokus utama pada narkotika.',
+    color:'#FF6B9D', emoji:'🧪'
   },
   {
-    icon:'⚖️', title:'Hukuman Sangat Berat',
-    stat:'Hukuman Mati', statContext:'untuk pengedar > 5 gram',
-    text:'Pengedar narkoba golongan I dalam jumlah besar bisa dijatuhi <span class="story-card-stat">hukuman mati</span>. Pemakai bisa dipenjara <span class="story-card-stat">4–12 tahun</span> sesuai UU No.35/2009. Tidak ada ampun!',
-    color:'#FF4757', emoji:'⚖️'
+    icon:'💉', title:'Overdosis Bisa Terjadi Dalam Hitungan Menit',
+    stat:'3-5 menit', statContext:'napas bisa berhenti pada overdosis opioid',
+    text:'Heroin dan opioid lain menekan pusat pernapasan di batang otak. Saat overdosis, korban bisa kehilangan kesadaran dan berhenti napas sangat cepat. Keterlambatan bantuan sering berujung fatal.',
+    color:'#FF4757', emoji:'⏱️'
   },
   {
-    icon:'💰', title:'Jebakan Finansial Mematikan',
-    stat:'Rp 5 Juta/hari', statContext:'kebutuhan pecandu sabu stadium lanjut',
-    text:'Pecandu sabu-sabu bisa menghabiskan <span class="story-card-stat">Rp 500rb–5 juta/hari</span>. Setara menghancurkan tabungan keluarga dalam hitungan minggu. Narkoba mencuri masa depan finansialmu.',
-    color:'#FF8C42', emoji:'💸'
+    icon:'📚', title:'Narkoba Adalah Istilah Payung',
+    stat:'3 kelompok', statContext:'narkotika, psikotropika, dan zat adiktif lainnya',
+    text:'Banyak orang memakai kata <span class="story-card-stat">narkoba</span> untuk semua zat berbahaya. Secara materi, kamu perlu paham bahwa narkotika adalah salah satu kelompok utama, sedangkan alkohol, rokok, dan inhalansia masuk pembahasan tambahan sebagai zat adiktif lain.',
+    color:'#FF8C42', emoji:'🗂️'
   },
   {
-    icon:'🚪', title:'Pintu Masuk: Teman Sebaya',
-    stat:'70%', statContext:'kasus berawal dari ajakan teman',
-    text:'<span class="story-card-stat">70%</span> kasus penyalahgunaan narkoba berawal dari ajakan teman. "Coba sekali aja" adalah kebohongan paling mematikan. Sekali bisa selamanya — otak tidak bisa di-reset!',
-    color:'#4ECDC4', emoji:'👥'
+    icon:'⚖️', title:'Sekali Membawa Bisa Masuk Masalah Hukum',
+    stat:'UU 35/2009', statContext:'penyalahgunaan narkotika tetap punya konsekuensi hukum',
+    text:'Menyimpan, membawa, membeli, atau menjadi perantara narkotika dapat menjerat pelaku dengan proses hukum. Untuk pelajar, dampaknya bukan hanya pidana, tetapi juga rusaknya reputasi, pendidikan, dan masa depan keluarga.',
+    color:'#4ECDC4', emoji:'📄'
   },
   {
-    icon:'💉', title:'Risiko Penyakit Mematikan',
-    stat:'20× lebih berisiko', statContext:'terkena HIV bagi pengguna jarum suntik',
-    text:'Pengguna narkoba suntik <span class="story-card-stat">20×</span> lebih berisiko tertular HIV/AIDS. Ganja meningkatkan risiko skizofrenia <span class="story-card-stat">5×</span> lipat. Tubuhmu terlalu berharga untuk dirusak!',
-    color:'#6BCB77', emoji:'🦠'
+    icon:'🚓', title:'Lapor Cepat Bisa Selamatkan Nyawa',
+    stat:'110', statContext:'nomor bantuan polisi yang mudah diingat',
+    text:'Kalau melihat dugaan penyalahgunaan atau peredaran narkotika, tindakan paling aman bukan menghadang pelaku sendiri, tetapi segera lapor ke guru, orang tua, satpam sekolah, atau polisi. Informasi cepat dan tepat bisa mencegah korban baru.',
+    color:'#6BCB77', emoji:'📢'
   }
 ];
 
@@ -1151,82 +1154,86 @@ const TIPS = [
   {
     icon:'🗣️', title:'Teman menawarkan: "Coba deh sekali aja, enak!"',
     sub:'Skenario paling umum yang terjadi di kehidupan nyata',
-    response:'"Makasih tapi nggak, gue emang gak tertarik."',
-    body:'Jawab singkat, tegas, TANPA alasan panjang. Semakin banyak alasan = semakin banyak celah yang dicari. Kalau mereka tetap maksa, langsung pergi — itu bukan pengecut, itu SMART!'
+    response:'"Nggak, gue nggak mau sentuh narkotika. Gue cabut ya."',
+    body:'Jawab singkat, tegas, dan langsung jaga jarak. Semakin panjang alasanmu, semakin besar peluang mereka menekan balik. Menolak cepat itu tanda kontrol diri, bukan takut.'
   },
   {
     icon:'😤', title:'Ditantang: "Ih pengecut, takut doang!"',
     sub:'Tekanan sosial lewat ejekan dan gengsi',
-    response:'"Gue lebih takut rusakin hidup gue sendiri. Lo jaga diri lo deh."',
-    body:'Putar balik narasi: yang berani adalah yang bisa menolak tekanan, bukan yang ikut-ikutan. Orang yang benar-benar peduli sama kamu tidak akan pernah memaksamu untuk berbahaya.'
+    response:'"Yang berani itu yang bisa jaga otak dan masa depannya."',
+    body:'Balikkan tekanannya. Orang yang benar-benar berani tidak perlu membuktikan diri dengan zat berbahaya. Jangan debat panjang kalau situasinya mulai memanas.'
   },
   {
-    icon:'🏃', title:'Situasi makin gawat, semua orang mulai pakai',
-    sub:'Terjebak dalam situasi berbahaya di pesta atau kumpulan',
-    response:'Langsung keluar dari situasi itu. Tidak perlu permisi panjang.',
-    body:'Buat alasan apapun — "ada urusan mendadak", "ortu nelpon" — dan langsung pergi. Keselamatan > gengsi. Segera hubungi orang tua atau teman terpercaya. Ceritakan situasinya.'
+    icon:'🏃', title:'Situasi makin gawat, ada yang mulai buka paket mencurigakan',
+    sub:'Kamu berada dekat dugaan penggunaan atau transaksi',
+    response:'Tinggalkan tempat, cari orang dewasa tepercaya, lalu laporkan lokasi dan situasinya.',
+    body:'Utamakan keselamatan. Jangan pegang barang, jangan ikut merekam terlalu dekat, dan jangan coba jadi pahlawan sendirian. Jarak aman lebih penting daripada gengsi.'
   },
   {
-    icon:'📞', title:'Teman sudah kecanduan dan minta tolong',
-    sub:'Mengetahui teman sedang dalam masalah narkoba',
-    response:'"Gue bantu lo, tapi kita harus lapor ke yang bisa bantu beneran."',
-    body:'Kamu tidak bisa sembuhkan teman sendiri. Segera hubungi BNN di <strong>1500 235</strong> (bebas pulsa, 24 jam, rahasia). Ajak guru BK atau orang tua terlibat. Itu bukan pengkhianatan — itu cinta sejati!'
+    icon:'📞', title:'Teman panik karena ada yang overdosis atau kecanduan berat',
+    sub:'Kondisi darurat yang butuh penanganan cepat',
+    response:'Hubungi bantuan darurat, panggil guru/orang tua, dan minta polisi melalui 110 bila ada unsur pidana atau situasi berbahaya.',
+    body:'Kalau ada ancaman, kekerasan, transaksi, atau jaringan pengedar di sekitar korban, lapor ke polisi adalah langkah penting. Fokusmu: selamatkan orangnya, amankan lokasi, dan jangan biarkan temanmu ditangani diam-diam oleh anak-anak sendiri.'
   },
   {
-    icon:'🤝', title:'Cara pilih circle yang aman',
-    sub:'Strategi pencegahan jangka panjang',
-    response:'Bergabung aktif di komunitas positif yang membuat kamu sibuk produktif.',
-    body:'Remaja dengan aktivitas padat (olahraga, seni, esport, OSIS, PMR) 60% lebih tahan dari tekanan narkoba. Waktu luang yang banyak adalah celah masuknya pengaruh buruk. Isi waktumu!'
+    icon:'📝', title:'Cara pelaporan yang aman ke polisi',
+    sub:'Supaya laporanmu jelas dan tidak membahayakan diri',
+    response:'Catat lokasi, waktu, ciri orang, kendaraan, dan arah kabur. Lapor seperlunya tanpa konfrontasi langsung.',
+    body:'Saat melapor, sampaikan fakta inti: siapa yang terlihat, di mana, kapan, apa yang kamu lihat, dan apakah ada senjata atau korban. Jangan sebar video ke media sosial sebelum proses aman karena itu bisa memicu risiko baru.'
   }
 ];
 
 const QUESTIONS = [
-  { ch:1, emoji:'💊', q:'Apa perbedaan utama narkotika, psikotropika, dan zat adiktif lainnya?', opts:['Ketiganya sama-sama vitamin','Narkotika dari alam, psikotropika sintetis, zat adiktif seperti alkohol & rokok','Ketiganya hanya ada di apotek','Psikotropika lebih aman dari narkotika'], ans:1, fact:'Narkotika bekerja pada SSP menyebabkan ketergantungan. Psikotropika mengubah suasana hati. Zat adiktif lain seperti alkohol & nikotin juga menyebabkan ketergantungan.' },
-  { ch:1, emoji:'🌿', q:'Ganja (Cannabis sativa) masuk golongan narkotika berapa dan mengapa paling berbahaya bagi remaja?', opts:['Golongan III — efeknya ringan','Golongan II — untuk pengobatan terbatas','Golongan I — merusak perkembangan otak remaja yang masih berkembang','Bukan narkotika, tergolong herbal'], ans:2, fact:'Otak remaja masih berkembang sampai usia 25 tahun. Ganja mengganggu perkembangan ini secara permanen, menurunkan memori dan kemampuan belajar.' },
-  { ch:1, emoji:'🧪', q:'Methamphetamine (sabu-sabu) termasuk zat golongan apa dan apa efek awalnya yang bikin ketagihan?', opts:['Depresan — bikin ngantuk','Stimulan — euphoria, energi meledak, percaya diri tinggi','Halusinogen — melihat warna-warni','Sedatif — mengurangi kecemasan'], ans:1, fact:'Sabu-sabu melepaskan dopamin 10× lebih banyak dari normal. Efek euphoria inilah yang membuat otak "ketagihan" dan terus minta lagi meski menghancurkan tubuh.' },
-  { ch:1, emoji:'🔬', q:'New Psychoactive Substances (NPS) atau "designer drugs" seperti apa bahayanya?', opts:['Lebih aman karena baru','Efeknya belum diketahui, sulit dideteksi tes urin, sering mematikan','Hanya untuk penelitian ilmiah','Disetujui WHO untuk pengobatan'], ans:1, fact:'NPS terus bermutasi agar lolos hukum dan tes. Tanpa data keamanan, penggunanya jadi "kelinci percobaan" dengan risiko kematian mendadak yang jauh lebih tinggi.' },
-  { ch:2, emoji:'🧠', q:'Bagian otak mana yang pertama kali rusak akibat narkoba, dan dampak terburuknya apa?', opts:['Otak kecil (keseimbangan)','Batang otak (pernapasan)','Prefrontal cortex — hilang kendali diri, moral, dan kemampuan membuat keputusan','Hipokampus — hanya melupakan nama orang'], ans:2, fact:'Prefrontal cortex adalah "CEO otak" yang mengatur moralitas dan keputusan rasional. Rusaknya bagian ini = pecandu tidak bisa menolak dorongan pakai narkoba meski tahu akibatnya.' },
-  { ch:2, emoji:'⚖️', q:'Seorang siswa ketahuan membawa 0,5 gram ganja di sekolah. Hukuman apa yang bisa dijatuhkan?', opts:['Hanya diperingatkan','Hukuman percobaan saja','Dipenjara 4-12 tahun sesuai UU No.35/2009','Tidak ada hukuman untuk pelajar'], ans:2, fact:'UU No.35/2009 berlaku untuk semua WNI tanpa pengecualian usia. Namun anak di bawah 18 tahun bisa diarahkan ke rehabilitasi. Tetap ada catatan kriminal yang merusak masa depan.' },
-  { ch:2, emoji:'💔', q:'Urutan dampak sosial yang paling umum terjadi pada pecandu narkoba adalah?', opts:['Makin populer → kaya → sukses','Prestasi menurun → izolasi → mencuri → penjara → kehancuran keluarga','Langsung penjara dari pertama','Tidak ada dampak sosial, hanya medis'], ans:1, fact:'Narkoba menciptakan spiral kehancuran: performa turun → kehilangan kepercayaan → putus sekolah/kerja → mencuri untuk beli narkoba → penjara → keluarga hancur.' },
-  { ch:2, emoji:'💉', q:'Mengapa overdosis opioid (heroin, morfin) bisa membunuh dalam hitungan menit?', opts:['Menyebabkan serangan jantung langsung','Menghentikan sinyal pernapasan di batang otak — penderita berhenti napas','Membuat suhu tubuh naik fatal','Meledakkan pembuluh darah otak'], ans:1, fact:'Opioid menekan pusat pernapasan di batang otak. Overdosis = napas berhenti total dalam 3-5 menit. Naloxone (antidot) harus diberikan SEGERA untuk menyelamatkan nyawa.' },
-  { ch:3, emoji:'🛡️', q:'Teman memaksa "Coba sekali aja bro, gak bakal ketagihan!" Respons paling tepat adalah?', opts:['"Oke deh, sekali aja"','"Makasih tapi nggak, gue gak tertarik" + langsung tinggalkan','Diam dan pura-pura tidak dengar','Minta waktu untuk mikir dulu'], ans:1, fact:'Jawaban tegas tanpa penjelasan panjang adalah yang paling efektif. Semakin banyak alasan kamu berikan, semakin banyak celah yang mereka cari. Pergi = smart, bukan pengecut.' },
-  { ch:3, emoji:'📞', q:'Hotline BNN yang bisa dihubungi gratis 24 jam dari semua operator adalah?', opts:['119 ext 8','110','1500 235','021-80880175'], ans:2, fact:'BNN Hotline 1500 235 (bebas pulsa) atau WA 0811-1211-535. Bersifat rahasia. Kalau kamu atau temanmu butuh bantuan, hubungi sekarang — tidak ada yang terlambat.' },
-  { ch:3, emoji:'🧩', q:'Faktor protektif terkuat yang terbukti mencegah remaja dari penyalahgunaan narkoba adalah?', opts:['Punya banyak uang','Komunikasi terbuka dengan orang tua + keterlibatan kegiatan positif','Tinggal di kota besar','Sekolah di sekolah favorit'], ans:1, fact:'Riset NIDA: remaja dengan hubungan keluarga kuat dan aktivitas positif (olahraga, seni, organisasi) 60% lebih tahan terhadap tekanan teman untuk mencoba narkoba.' },
-  { ch:3, emoji:'🌟', q:'Jika menemukan teman yang sudah kecanduan narkoba, langkah paling tepat adalah?', opts:['Jauhi dan putus pertemanan selamanya','Coba sembuhkan sendiri tanpa bilang siapapun','Segera lapor ke BNN/guru/orang tua tanpa menghakimi — ajak rehabilitasi','Ikut-ikutan agar diterima'], ans:2, fact:'Kecanduan adalah penyakit, bukan pilihan. Teman sejati melaporkan ke pihak yang tepat agar mendapat rehabilitasi. BNN menjamin kerahasiaan dan perlindungan hukum bagi yang mau pulih.' }
+  { ch:1, emoji:'💊', q:'Apa pemahaman yang paling tepat tentang istilah narkotika dan narkoba?', opts:['Narkotika dan narkoba itu persis sama tanpa perbedaan','Narkotika adalah kelompok zat tertentu, sedangkan narkoba adalah istilah payung yang sering dipakai untuk narkotika, psikotropika, dan zat adiktif lain','Narkotika hanya berasal dari tanaman, narkoba hanya dari pabrik','Narkoba hanya sebutan untuk ganja dan sabu'], ans:1, fact:'Materi ini menekankan narkotika sebagai fokus utama. Istilah narkoba memang lebih populer di masyarakat, tetapi secara edukasi kamu perlu tahu pembagian zatnya.' },
+  { ch:1, emoji:'🌿', q:'Mengapa ganja berbahaya bila dipakai remaja walau sering disebut "alami"?', opts:['Karena rasanya pahit','Karena tetap termasuk narkotika dan bisa mengganggu perkembangan otak remaja','Karena hanya berbahaya bila dicampur kopi','Karena aman asal dipakai sedikit'], ans:1, fact:'Label "alami" tidak membuatnya aman. Pada remaja, efeknya bisa mengenai memori, fokus, motivasi belajar, dan kestabilan emosi.' },
+  { ch:1, emoji:'🧪', q:'Heroin termasuk jenis zat apa?', opts:['Narkotika opioid','Vitamin saraf','Minuman energi sintetis','Obat flu biasa'], ans:0, fact:'Heroin adalah opioid yang bekerja menekan sistem saraf pusat dan sangat berisiko menyebabkan ketergantungan serta overdosis.' },
+  { ch:1, emoji:'⚡', q:'Sabu-sabu paling tepat digolongkan sebagai zat yang...', opts:['Merangsang sistem saraf dan memicu euforia kuat','Menenangkan otot seperti obat tidur','Mengobati kecemasan tanpa efek samping','Aman dipakai saat ujian agar fokus'], ans:0, fact:'Sabu adalah stimulan kuat. Efek "segar" dan percaya diri yang terasa cepat justru jadi pintu ketagihan dan kerusakan berat.' },
+  { ch:2, emoji:'🧠', q:'Bagian otak mana yang sangat terdampak sehingga pengguna sulit mengontrol keputusan?', opts:['Kulit kepala','Prefrontal cortex','Lobus telinga','Sumsum tulang'], ans:1, fact:'Prefrontal cortex membantu menimbang risiko, menahan dorongan, dan mengambil keputusan rasional. Kerusakan di sini membuat kontrol diri turun drastis.' },
+  { ch:2, emoji:'💉', q:'Mengapa overdosis heroin atau opioid bisa membunuh cepat?', opts:['Karena membuat tubuh tertawa terus','Karena menghentikan sinyal pernapasan di otak','Karena langsung merontokkan tulang','Karena menjadikan darah manis'], ans:1, fact:'Saat pusat napas ditekan, korban bisa berhenti bernapas dalam hitungan menit. Itulah mengapa respons darurat harus sangat cepat.' },
+  { ch:2, emoji:'⚖️', q:'Seorang siswa tertangkap membawa ganja ke sekolah. Risiko terbesarnya adalah...', opts:['Hanya disuruh pulang lebih cepat','Tetap bisa berproses hukum dan merusak masa depan sekolahnya','Langsung bebas karena masih pelajar','Tidak ada konsekuensi jika jumlahnya kecil'], ans:1, fact:'Status pelajar tidak membuat perbuatan itu otomatis aman. Aspek hukum, nama baik, dan masa depan pendidikan bisa ikut rusak.' },
+  { ch:2, emoji:'💸', q:'Dampak sosial-ekonomi yang paling sering muncul pada penyalahgunaan narkotika adalah...', opts:['Nilai naik dan pergaulan makin sehat','Prestasi turun, relasi rusak, lalu muncul tekanan uang dan risiko kriminal','Tubuh makin kuat dan hemat uang','Tidak ada efek di keluarga'], ans:1, fact:'Penyalahgunaan narkotika jarang berdampak hanya pada satu orang. Keluarga, sekolah, dan lingkungan ikut terkena efeknya.' },
+  { ch:3, emoji:'🛡️', q:'Teman memaksa: "Coba sekali aja." Respons paling aman adalah...', opts:['Ikut sekali supaya tidak dibilang takut','Menolak tegas lalu menjauh dari situasi','Minta dikurangi dosisnya','Diam saja tapi tetap di tempat'], ans:1, fact:'Jawaban singkat dan tegas lebih efektif daripada alasan panjang. Setelah itu, ambil jarak dari sumber tekanannya.' },
+  { ch:3, emoji:'🤝', q:'Faktor protektif yang paling membantu remaja menolak narkotika adalah...', opts:['Punya uang banyak','Lingkungan positif dan komunikasi terbuka dengan keluarga/guru','Sering begadang bareng teman','Banyak followers media sosial'], ans:1, fact:'Relasi yang sehat dan aktivitas positif membantu remaja punya dukungan saat menghadapi tekanan teman sebaya.' },
+  { ch:3, emoji:'🚪', q:'Kamu melihat teman membuka paket mencurigakan di toilet sekolah. Langkah awal terbaik adalah...', opts:['Mendekat dan memegang barangnya','Segera menjauh lalu lapor ke guru, satpam, atau wali kelas','Ikut mencoba agar tahu isinya','Diam saja supaya tidak ribut'], ans:1, fact:'Tujuanmu bukan membuktikan diri, tetapi mengamankan diri dan mempercepat penanganan oleh pihak yang berwenang.' },
+  { ch:3, emoji:'🧩', q:'Pernyataan mana yang paling benar tentang kalimat "sekali coba tidak apa-apa"?', opts:['Benar, kalau mental kuat pasti aman','Benar, asal bareng teman dekat','Salah, karena sekali coba pun bisa jadi pintu ketagihan atau overdosis','Benar, kalau tidak sering'], ans:2, fact:'Banyak penyalahgunaan dimulai dari rasa ingin tahu sekali. Pada zat tertentu, satu kali pemakaian saja sudah sangat berbahaya.' },
+  { ch:4, emoji:'📞', q:'Jika ada dugaan transaksi atau ancaman terkait narkotika, nomor bantuan polisi yang paling tepat diingat adalah...', opts:['119','110','112','113'], ans:1, fact:'Nomor 110 digunakan untuk layanan kepolisian. Ini penting saat situasi butuh respons keamanan atau ada unsur pidana yang jelas.' },
+  { ch:4, emoji:'📍', q:'Informasi apa yang paling membantu saat melapor ke polisi?', opts:['Cerita yang panjang tanpa inti','Komentar teman-teman di grup','Lokasi, waktu kejadian, ciri orang, kendaraan, dan apa yang terlihat','Jumlah followers yang melihat kejadian'], ans:2, fact:'Laporan yang jelas dan ringkas membantu petugas bergerak lebih cepat dan lebih tepat.' },
+  { ch:4, emoji:'🚫', q:'Saat melihat dugaan transaksi narkotika dari jauh, apa yang tidak boleh dilakukan?', opts:['Menghadang pelaku sendirian demi terlihat berani','Menjauh ke tempat aman','Mencatat ciri penting dari jarak aman','Melapor ke orang dewasa atau polisi'], ans:0, fact:'Melakukan konfrontasi sendirian sangat berbahaya. Keselamatan pelapor harus selalu diutamakan.' },
+  { ch:4, emoji:'🧾', q:'Setelah laporan diterima polisi, sikap paling tepat dari pelapor adalah...', opts:['Menyebar rumor ke media sosial','Mengubah-ubah cerita agar terdengar dramatis','Tetap jujur, siap memberi keterangan yang konsisten, dan tidak mengganggu proses','Mendatangi pelaku untuk minta klarifikasi sendiri'], ans:2, fact:'Laporan yang baik didukung keterangan yang jujur dan konsisten. Jangan merusak proses dengan asumsi atau tindakan nekat.' }
 ];
 
 const MINIGAMES = [
   [
-    { text:'Ganja "medical" aman dikonsumsi remaja karena dosis kecil tidak berbahaya', isMitos:true, explain:'MITOS BERBAHAYA! Otak remaja yang masih berkembang JAUH lebih rentan kerusakan permanen dari ganja dibanding otak dewasa, berapapun dosisnya.' },
-    { text:'Overdosis narkoba bisa membunuh orang yang baru pertama kali mencoba', isMitos:false, explain:'FAKTA KERAS! Tidak ada "dosis aman" untuk pertama kali. Tubuh setiap orang berbeda. Banyak korban overdosis fatal justru baru pertama kali coba.' },
-    { text:'"Coba sekali tidak akan kecanduan, cukup punya tekad kuat"', isMitos:true, explain:'MITOS PALING MEMATIKAN! Sabu-sabu bisa menyebabkan craving kuat setelah 1-2 kali penggunaan. Ketergantungan psikologis bisa terjadi dalam hitungan hari.' },
-    { text:'Pecandu narkoba bisa pulih sepenuhnya melalui program rehabilitasi BNN', isMitos:false, explain:'FAKTA HARAPAN! Rehabilitasi BNN gratis dan terbukti efektif. Ribuan mantan pecandu berhasil pulih dan produktif kembali. Belum terlambat untuk minta bantuan.' }
+    { text:'Narkotika golongan I aman dicoba sekali selama tidak tiap hari', isMitos:true, explain:'MITOS BERBAHAYA! Satu kali pemakaian pun bisa jadi awal ketagihan, gangguan mental, bahkan overdosis pada zat tertentu.' },
+    { text:'Overdosis heroin atau opioid bisa menghentikan napas hanya dalam beberapa menit', isMitos:false, explain:'FAKTA DARURAT! Inilah alasan bantuan cepat dan respons orang dewasa sangat penting saat ada korban tak sadar atau sulit bernapas.' },
+    { text:'Istilah narkoba sering dipakai sebagai istilah umum yang mencakup narkotika, psikotropika, dan zat adiktif lain', isMitos:false, explain:'FAKTA! Tapi dalam materi ini kita memberi penekanan lebih besar pada narkotika agar pemahamannya lebih tajam.' },
+    { text:'Sabu-sabu adalah zat penenang yang membuat tubuh rileks seperti obat tidur', isMitos:true, explain:'MITOS! Sabu justru stimulan kuat yang memaksa tubuh bekerja berlebihan dan merusak sistem saraf.' }
   ],
   [
-    { text:'Alkohol lebih aman dari narkoba jadi boleh dikonsumsi remaja sebagai "pengganti"', isMitos:true, explain:'MITOS GANDA! Alkohol adalah zat adiktif yang juga merusak otak remaja, meningkatkan risiko kecelakaan, dan sering jadi "pintu" ke narkoba yang lebih keras.' },
-    { text:'Pengedar narkoba di Indonesia bisa dijatuhi hukuman mati sesuai UU', isMitos:false, explain:'FAKTA HUKUM! Pasal 113 UU No.35/2009: pengedar narkoba golongan I dalam jumlah besar dapat dijatuhi hukuman mati. Indonesia serius berantas narkoba.' },
-    { text:'Narkoba hanya merusak pengguna sendiri, tidak mempengaruhi orang sekitar', isMitos:true, explain:'MITOS EGOIS! Pecandu narkoba rata-rata merusak 5-10 orang di sekitarnya: keluarga, teman, korban kejahatan yang dilakukan untuk beli narkoba.' },
-    { text:'Tes urin narkoba bisa mendeteksi penggunaan sabu-sabu hingga 3-4 hari setelah konsumsi', isMitos:false, explain:'FAKTA ILMIAH! Sabu-sabu terdeteksi 3-4 hari di urin. Ganja bisa terdeteksi hingga 30 hari pada pengguna berat. Tes rambut bahkan bisa deteksi 90 hari ke belakang!' }
+    { text:'Kalau melihat dugaan transaksi narkotika, langkah paling aman adalah menjauh lalu lapor ke guru, orang tua, satpam, atau polisi', isMitos:false, explain:'FAKTA! Menjaga jarak sambil mempercepat laporan jauh lebih aman daripada bertindak nekat sendirian.' },
+    { text:'Supaya dianggap berani, pelapor sebaiknya menghadang pelaku sendiri sebelum polisi datang', isMitos:true, explain:'MITOS BERISIKO! Pelapor bukan petugas lapangan. Menghadang sendiri bisa membahayakan diri dan orang lain.' },
+    { text:'Saat melapor, detail seperti lokasi, waktu, ciri pelaku, dan kendaraan sangat membantu polisi', isMitos:false, explain:'FAKTA! Informasi yang spesifik membuat tindak lanjut lebih cepat dan lebih akurat.' },
+    { text:'Sebelum melapor, video kejadian sebaiknya langsung diviralkan dulu agar ramai', isMitos:true, explain:'MITOS! Yang utama adalah keselamatan dan laporan resmi. Viral belum tentu membantu, malah bisa memperkeruh situasi.' }
   ]
 ];
 
 const QUOTES = [
-  '"Hidupmu terlalu berharga untuk dirusak narkoba." 🌟',
-  '"Berani bilang tidak adalah tanda orang kuat." 💪',
-  '"Masa depanmu dimulai dari pilihan hari ini." 🚀',
-  '"Otakmu adalah aset terbesar — jaga baik-baik!" 🧠',
-  '"Generasi bebas narkoba = Indonesia maju." 🇮🇩',
-  '"Narkoba mencuri impianmu. Jangan biarkan!" 🛡️',
-  '"Teman sejati tidak pernah menawari narkoba." ❤️',
-  '"Kamu lebih kuat dari tekanan apapun." ⚡'
+  '"Masa depan kuat dimulai dari paham bahaya narkotika." 🌟',
+  '"Berani menolak narkotika adalah bentuk menjaga diri." 💪',
+  '"Ilmu yang benar bisa menyelamatkan keputusanmu." 🚀',
+  '"Otakmu terlalu berharga untuk dirusak zat terlarang." 🧠',
+  '"Siaga narkotika berarti sayang masa depan." 🇮🇩',
+  '"Narkotika bisa merampas arah hidup jika dibiarkan." 🛡️',
+  '"Teman sejati tidak mengajakmu menyentuh zat berbahaya." ❤️',
+  '"Lapor dengan aman juga bagian dari keberanian." 🚓'
 ];
 
 const RANKS = [
-  { min:90, icon:'👑', label:'LEGENDA', sub:'Anti-Narkoba Hall of Fame!', color:'#FFD93D', badgeStart:'#FFE066', badgeEnd:'#FF8C42', badgeGlow:'rgba(255, 184, 77, 0.38)' },
-  { min:75, icon:'🏆', label:'PAHLAWAN', sub:'Anti-Narkoba Sejati!', color:'var(--green)', badgeStart:'#6BCB77', badgeEnd:'#2FAE66', badgeGlow:'rgba(47, 174, 102, 0.28)' },
-  { min:60, icon:'⭐', label:'PEJUANG', sub:'Hampir sempurna, terus belajar!', color:'var(--purple)', badgeStart:'#9B59FF', badgeEnd:'#6F42E8', badgeGlow:'rgba(111, 66, 232, 0.28)' },
-  { min:40, icon:'📚', label:'CALON PAHLAWAN', sub:'Belajar lagi, pasti bisa!', color:'var(--orange)', badgeStart:'#FFB45C', badgeEnd:'#FF8C42', badgeGlow:'rgba(255, 140, 66, 0.28)' },
-  { min:0, icon:'💪', label:'PEMULA BERANI', sub:'Langkah pertama yang hebat!', color:'var(--red)', badgeStart:'#FF6B7A', badgeEnd:'#FF4757', badgeGlow:'rgba(255, 71, 87, 0.28)' }
+  { min:90, icon:'👑', label:'LEGENDA', sub:'Siaga Narkotika Tingkat Tertinggi!', color:'#FFD93D', badgeStart:'#FFE066', badgeEnd:'#FF8C42', badgeGlow:'rgba(255, 184, 77, 0.38)' },
+  { min:75, icon:'🏆', label:'GARDA', sub:'Pelindung Anti-Narkotika!', color:'var(--green)', badgeStart:'#6BCB77', badgeEnd:'#2FAE66', badgeGlow:'rgba(47, 174, 102, 0.28)' },
+  { min:60, icon:'⭐', label:'PEJUANG', sub:'Pemahamanmu sudah kuat!', color:'var(--purple)', badgeStart:'#9B59FF', badgeEnd:'#6F42E8', badgeGlow:'rgba(111, 66, 232, 0.28)' },
+  { min:40, icon:'📚', label:'SIAGA', sub:'Tinggal selangkah lagi makin tajam!', color:'var(--orange)', badgeStart:'#FFB45C', badgeEnd:'#FF8C42', badgeGlow:'rgba(255, 140, 66, 0.28)' },
+  { min:0, icon:'💪', label:'PEMULA BERANI', sub:'Langkah awal yang sangat berarti!', color:'var(--red)', badgeStart:'#FF6B7A', badgeEnd:'#FF4757', badgeGlow:'rgba(255, 71, 87, 0.28)' }
 ];
 
 const NARA_COMMENTS = {
@@ -1241,24 +1248,32 @@ const NARA_COMMENTS = {
   mgCorrect: ['Faktanya ada di kepalamu! 🧠','Kamu tidak bisa dibohongi! 🛡️','Big brain moment! 💡'],
   mgWrong: ['Itu jebakan bestie! Baca faktanya! 😅','Next kamu pasti lebih kritis! 📖'],
   mgTimeout: ['Wah kehabisan waktu! Baca faktanya ya! ⏰','Jangan panik, baca dulu faktanya! 📖'],
-  win: ['JUARA!! SMK 1 Kongbeng BANGGA BANGET! 🏆🎊','INCREDIBLE!! Pahlawan anti-narkoba dari Kaltim! 🦸','CHAMPION! Indonesia butuh orang kayak kamu! 🇮🇩'],
+  win: ['JUARA!! SMK 1 Kongbeng bangga banget! 🏆🎊','INCREDIBLE!! Garda anti-narkotika dari Kaltim! 🦸','CHAMPION! Indonesia butuh generasi siaga kayak kamu! 🇮🇩'],
   lose: ['Belum max score, tapi udah berani! 💪','Belajar lagi yuk, kamu pasti bisa! 📚','Perjalanan ribuan langkah dimulai dari sini! 🌟'],
   hint_near: ['Psst! Perhatiin pilihan yang paling "common sense"! 🤫','Hint dari Nara: biasanya jawaban yang paling spesifik itu bener! 💡']
 };
 
 const NARA_CARD_COMMENTS = {
-  ch1: ['Soal bab pertama, masih hangat-hangatnya! 🔥','Kenali musuhnya dulu baru bisa lawan! 💪','Bab 1 basa-basi dulu, next baru serius! 😜'],
-  ch2: ['Nah ini serius nih bestie! Konsen! 😤','Bab 2: fakta-fakta yang wajib masuk otak! 🧠','Dampak narkoba gak main-main, yuk pelajari! ⚠️'],
-  ch3: ['Bab terakhir! Yang paling penting: cara nolak! 🛡️','Bab 3: skill survival yang wajib dikuasai! ⚡','Ini soal yang bakal berguna IRL! 💯'],
+  ch1: ['Bab 1 dulu: kenali narkotika dengan benar! 🔥','Dasarnya kuat dulu biar gak gampang dibohongi! 💪','Fokus, ini fondasi penting buat semua bab berikutnya! 😎'],
+  ch2: ['Nah ini bagian dampak dan hukum, konsen ya! 😤','Bab 2 bikin kamu paham kenapa narkotika gak bisa disepelekan. ⚖️','Masuk zona serius: tubuh, otak, dan hukum semua kena. 💥'],
+  ch3: ['Bab 3 waktunya latihan nolak dengan tegas! 🛡️','Skill bertahan di dunia nyata dimulai dari bab ini. ⚡','Ini bab yang paling kepakai kalau ada tekanan teman. 💯'],
+  ch4: ['Bab terakhir: cara lapor aman ke polisi. 🚓','Pengetahuan bagus itu lengkap sampai tahu cara melapor. 📞','Bab 4 bikin kamu bukan cuma paham, tapi juga siap bertindak aman. 🧾'],
   mg: ['Mini game time! Nara di sini nemenin! 🎯','Combo time! Jawab cepet ya! ⚡','Mitos atau fakta? Nara udah tau jawabannya hehe 😏']
 };
+
+const CHAPTERS = [
+  { num: 1, short: 'Bab 1', badge: 'Bab 1 — Mengenal Narkotika', next: 'Bab 2 — Dampak & Hukum', emoji: '🧠', className: 'ch1', nextEmoji: '⚖️' },
+  { num: 2, short: 'Bab 2', badge: 'Bab 2 — Dampak & Hukum', next: 'Bab 3 — Pencegahan & Penolakan', emoji: '⚖️', className: 'ch2', nextEmoji: '🛡️' },
+  { num: 3, short: 'Bab 3', badge: 'Bab 3 — Pencegahan & Penolakan', next: 'Bab 4 — Pelaporan ke Polisi', emoji: '🛡️', className: 'ch3', nextEmoji: '🚓' },
+  { num: 4, short: 'Bab 4', badge: 'Bab 4 — Pelaporan ke Polisi', next: null, emoji: '🚓', className: 'ch4', nextEmoji: null }
+];
 
 // ===== STATE =====
 let state = {
   playerName:'', score:0, streak:0, bestStreak:0, correct:0, wrong:0,
   currentQ:0, storyIndex:0, mgRound:0, mgAnswers:0,
-  chCorrect:[0,0,0], chTotal:[4,4,4],
-  mgScore:0, gamePhase:'welcome', questionCount:12,
+  chCorrect:[0,0,0,0], chTotal:[4,4,4,4],
+  mgScore:0, gamePhase:'welcome', questionCount:16,
   lastChapter: 0,
   seenFacts: new Set()
 };
@@ -1290,7 +1305,7 @@ function renderMobileCert(rank, pct) {
       <div class="cert-header">
         <div class="cert-school">🏫 SMK NEGERI 1 KONGBENG</div>
         <div class="cert-school-sub">Kabupaten Kutai Timur - Kalimantan Timur</div>
-        <div class="cert-title">Sertifikat Digital - Narkoba Quest</div>
+        <div class="cert-title">Sertifikat Digital - Narkotika Quest</div>
       </div>
       <hr class="cert-divider">
       <div style="font-size:10px;color:rgba(255,255,255,0.6);text-align:center;font-weight:700;margin-bottom:2px">DIBERIKAN KEPADA</div>
@@ -1301,7 +1316,7 @@ function renderMobileCert(rank, pct) {
         <div class="cert-score-item"><div class="cert-score-val">${state.bestStreak}</div><div class="cert-score-lbl">STREAK</div></div>
       </div>
       <div class="cert-rank"><div class="cert-rank-text">${rank.icon} ${safeRank}</div></div>
-      <div class="cert-footer">Generasi Bebas Narkoba 🇮🇩 | NarkobaQuest v2.0</div>
+      <div class="cert-footer">Generasi Siaga Narkotika 🇮🇩 | NarkotikaQuest v3.0</div>
     </div>
     <div class="cert-hint">📸 Screenshot sertifikat ini untuk kenang-kenangan!</div>
   `;
@@ -1315,7 +1330,7 @@ function updateResultExtras(pct, rank, chapterData) {
     `📘 Bab terkuat: ${strongest.label} ${strongest.pct}%`
   ];
 
-  if (pct >= 85) highlightItems.push('🛡️ Siap jadi teladan anti-narkoba');
+  if (pct >= 85) highlightItems.push('🛡️ Siap jadi teladan anti-narkotika');
   else if (pct >= 60) highlightItems.push('⚡ Tinggal sedikit lagi ke level juara');
   else highlightItems.push('📚 Masih bisa naik jauh di percobaan berikutnya');
 
@@ -1328,7 +1343,7 @@ function updateResultExtras(pct, rank, chapterData) {
 
   if (pct >= 90) {
     nextTitle = 'Kamu pantas jadi role model';
-    nextText = 'Screenshot hasil ini, bagikan ke temanmu, lalu tantang mereka buat nyusul skor tinggi sambil bawa pesan anti-narkoba.';
+    nextText = 'Screenshot hasil ini, bagikan ke temanmu, lalu tantang mereka buat nyusul skor tinggi sambil bawa pesan siaga narkotika.';
   } else if (pct >= 75) {
     nextTitle = 'Tinggal satu dorongan lagi ke puncak';
     nextText = `Hasilmu sudah kuat. Coba ulang sekali lagi sambil fokus memperbaiki ${strongest.label.toLowerCase()} supaya tembus kategori legenda.`;
@@ -1742,16 +1757,14 @@ function floatScore(pts, btn) {
 }
 
 function showLevelUpBanner(chNum) {
-  const info = [null,
-    {emoji:'🧠', title:'Bab 1 Selesai!', sub:'Lanjut ke Bab 2 — Bahaya & Dampak ⚠️'},
-    {emoji:'⚠️', title:'Bab 2 Selesai!', sub:'Lanjut ke Bab 3 — Cara Menolak 🛡️'},
-    {emoji:'🛡️', title:'Bab 3 Selesai!', sub:'Wah kamu luar biasa! 🎉'},
-  ];
-  const d = info[chNum];
-  if (!d) return;
-  document.getElementById('lu-emoji').textContent = d.emoji;
-  document.getElementById('lu-title').textContent = d.title;
-  document.getElementById('lu-sub').textContent = d.sub;
+  const chapter = CHAPTERS[chNum - 1];
+  if (!chapter) return;
+  const nextText = chapter.next
+    ? `Lanjut ke ${chapter.next}${chapter.nextEmoji ? ` ${chapter.nextEmoji}` : ''}`
+    : 'Kamu berhasil menuntaskan semua materi! 🎉';
+  document.getElementById('lu-emoji').textContent = chapter.emoji;
+  document.getElementById('lu-title').textContent = `${chapter.short} Selesai!`;
+  document.getElementById('lu-sub').textContent = nextText;
   const banner = document.getElementById('level-up-banner');
   banner.classList.add('show');
   playSound('levelup');
@@ -1818,6 +1831,7 @@ function setBgChapter(ch) {
   if (ch===1) document.body.classList.add('ch1-bg');
   else if (ch===2) document.body.classList.add('ch2-bg');
   else if (ch===3) document.body.classList.add('ch3-bg');
+  else if (ch===4) document.body.classList.add('ch4-bg');
   else document.body.classList.add('mg-bg');
 }
 
@@ -1924,15 +1938,15 @@ function renderQuestion() {
   if (state.currentQ === 4 && state.mgRound === 0) { showMinigame(0); return; }
   if (state.currentQ === 8 && state.mgRound === 1) { showMinigame(1); return; }
   const q = QUESTIONS[state.currentQ];
-  if (q.ch !== state.lastChapter && state.lastChapter > 0 && state.lastChapter < q.ch) {
-    setTimeout(()=>showLevelUpBanner(state.lastChapter), 200);
+  const previousChapter = state.lastChapter;
+  if (q.ch !== previousChapter && previousChapter > 0 && previousChapter < q.ch) {
+    setTimeout(()=>showLevelUpBanner(previousChapter), 200);
   }
   state.lastChapter = q.ch;
   setBgChapter(q.ch);
-  const chLabels = ['Bab 1 — Mengenal Narkoba','Bab 2 — Bahaya & Dampak','Bab 3 — Cara Menolak'];
-  const chClass = ['ch1','ch2','ch3'];
-  document.getElementById('chapter-badge').textContent = chLabels[q.ch-1];
-  document.getElementById('chapter-badge').className = 'chapter-badge ' + chClass[q.ch-1];
+  const chapter = CHAPTERS[q.ch - 1];
+  document.getElementById('chapter-badge').textContent = chapter.badge;
+  document.getElementById('chapter-badge').className = 'chapter-badge ' + chapter.className;
   document.getElementById('question-emoji').textContent = q.emoji;
   document.getElementById('question-text').textContent = q.q;
   document.getElementById('mini-fact-box').classList.remove('show');
@@ -1998,7 +2012,7 @@ function answerQuestion(idx, btn) {
   state.currentQ++;
 }
 
-const MG_TIMER_SEC = 8;
+const MG_TIMER_SEC = 60;
 
 function showMinigame(round) {
   state.mgRound = round + 1;
@@ -2159,16 +2173,14 @@ function showResults() {
   document.getElementById('cert-toggle-icon').textContent = '🎓';
   document.getElementById('cert-toggle-text').textContent = 'Lihat Sertifikat';
 
-  const ch1Pct = Math.round((state.chCorrect[0]/4)*100);
-  const ch2Pct = Math.round((state.chCorrect[1]/4)*100);
-  const ch3Pct = Math.round((state.chCorrect[2]/4)*100);
+  const chapterPercents = state.chCorrect.map((correct, idx) => Math.round((correct / (state.chTotal[idx] || 1)) * 100));
   setTimeout(()=>{
-    document.getElementById('ch1-bar').style.width = ch1Pct+'%';
-    document.getElementById('ch2-bar').style.width = ch2Pct+'%';
-    document.getElementById('ch3-bar').style.width = ch3Pct+'%';
-    document.getElementById('ch1-pct').textContent = ch1Pct+'%';
-    document.getElementById('ch2-pct').textContent = ch2Pct+'%';
-    document.getElementById('ch3-pct').textContent = ch3Pct+'%';
+    chapterPercents.forEach((val, idx) => {
+      const bar = document.getElementById(`ch${idx+1}-bar`);
+      const label = document.getElementById(`ch${idx+1}-pct`);
+      if (bar) bar.style.width = val + '%';
+      if (label) label.textContent = val + '%';
+    });
   }, 500);
 
   const rank = RANKS.find(r=>pct>=r.min) || RANKS[RANKS.length-1];
@@ -2187,18 +2199,19 @@ function showResults() {
   renderMobileCert(rank, pct);
 
   const chapterData = [
-    { label: 'Bab 1', pct: ch1Pct },
-    { label: 'Bab 2', pct: ch2Pct },
-    { label: 'Bab 3', pct: ch3Pct }
+    { label: 'Bab 1', pct: chapterPercents[0] },
+    { label: 'Bab 2', pct: chapterPercents[1] },
+    { label: 'Bab 3', pct: chapterPercents[2] },
+    { label: 'Bab 4', pct: chapterPercents[3] }
   ];
   updateResultExtras(pct, rank, chapterData);
 
   let mascot, title, category, catStyle;
-  if (pct>=90) { mascot='👑';title='SEMPURNA!!';category='👑 Legenda Anti-Narkoba';catStyle='background:linear-gradient(135deg,#FFD93D,#FF8C42);color:white';launchFireworks();launchConfetti();showNara('win','win'); }
-  else if (pct>=75) { mascot='🏆';title='Luar Biasa!';category='🏆 Pahlawan Anti-Narkoba';catStyle='background:#E8FFF0;color:var(--green)';launchConfetti();showNara('win','win'); }
-  else if (pct>=60) { mascot='🌟';title='Bagus Banget!';category='⭐ Pejuang Anti-Narkoba';catStyle='background:#F0E6FF;color:var(--purple)';showNara('correct','correct'); }
-  else if (pct>=40) { mascot='📚';title='Terus Belajar!';category='📖 Calon Pahlawan';catStyle='background:#FFF5E8;color:var(--orange)';showNara('wrong','lose'); }
-  else { mascot='💪';title='Jangan Menyerah!';category='💪 Pemula yang Berani';catStyle='background:#FFE8E8;color:var(--red)';showNara('lose','lose'); }
+  if (pct>=90) { mascot='👑';title='SEMPURNA!!';category='👑 Legenda Anti-Narkotika';catStyle='background:linear-gradient(135deg,#FFD93D,#FF8C42);color:white';launchFireworks();launchConfetti();showNara('win','win'); }
+  else if (pct>=75) { mascot='🏆';title='Luar Biasa!';category='🏆 Garda Anti-Narkotika';catStyle='background:#E8FFF0;color:var(--green)';launchConfetti();showNara('win','win'); }
+  else if (pct>=60) { mascot='🌟';title='Bagus Banget!';category='⭐ Pejuang Siaga Narkotika';catStyle='background:#F0E6FF;color:var(--purple)';showNara('correct','correct'); }
+  else if (pct>=40) { mascot='📚';title='Terus Belajar!';category='📖 Calon Garda Sekolah';catStyle='background:#FFF5E8;color:var(--orange)';showNara('wrong','lose'); }
+  else { mascot='💪';title='Jangan Menyerah!';category='💪 Pemula Waspada';catStyle='background:#FFE8E8;color:var(--red)';showNara('lose','lose'); }
 
   document.getElementById('result-mascot').textContent = mascot;
   document.getElementById('result-title').textContent = title;
@@ -2220,8 +2233,8 @@ function shareWA() {
   const name = state.playerName||'Seorang siswa';
   const pct = Math.round((state.correct/QUESTIONS.length)*100);
   const rank = RANKS.find(r=>pct>=r.min)||RANKS[RANKS.length-1];
-  const msg = `🎯 *Narkoba Quest v2 — SMK N 1 Kongbeng*\n\n`+
-    `👤 Pemain: ${name}\n${rank.icon} Gelar: ${rank.label}\n⭐ Skor: ${state.score}/200\n📊 Akurasi: ${pct}%\n🔥 Streak Terbaik: ${state.bestStreak}\n✅ Benar: ${state.correct}/${QUESTIONS.length}\n\n🛡️ Generasi Bebas Narkoba dari Kaltim!\n#NarkobaQuest #SMK1Kongbeng #AntiNarkoba #KutaiTimur`;
+  const msg = `🎯 *Narkotika Quest v3 — SMK N 1 Kongbeng*\n\n`+
+    `👤 Pemain: ${name}\n${rank.icon} Gelar: ${rank.label}\n⭐ Skor: ${state.score} poin\n📊 Akurasi: ${pct}%\n🔥 Streak Terbaik: ${state.bestStreak}\n✅ Benar: ${state.correct}/${QUESTIONS.length}\n\n🚓 Generasi Siaga Narkotika dari Kaltim!\n#NarkotikaQuest #SMK1Kongbeng #SiagaNarkotika #KutaiTimur`;
   window.open('https://wa.me/?text='+encodeURIComponent(msg));
 }
 
@@ -2253,8 +2266,8 @@ function restartGame() {
   state = {
     playerName: state.playerName, score:0, streak:0, bestStreak:0, correct:0, wrong:0,
     currentQ:0, storyIndex:0, mgRound:0, mgAnswers:0,
-    chCorrect:[0,0,0], chTotal:[4,4,4],
-    mgScore:0, gamePhase:'quiz', questionCount:12,
+    chCorrect:[0,0,0,0], chTotal:[4,4,4,4],
+    mgScore:0, gamePhase:'quiz', questionCount:16,
     lastChapter: 0, seenFacts: new Set()
   };
   document.getElementById('score-display').textContent = '0';

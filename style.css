@@ -31,6 +31,7 @@ body {
 body.ch1-bg { --bg-chapter: #FFF5FB; }
 body.ch2-bg { --bg-chapter: #FFF5F5; }
 body.ch3-bg { --bg-chapter: #F5FFF8; }
+body.ch4-bg { --bg-chapter: #EEF8FF; }
 body.mg-bg  { --bg-chapter: #FFFBF0; }
 body { background: var(--bg-chapter); }
 
@@ -320,6 +321,7 @@ body { background: var(--bg-chapter); }
 .ch1 { background:#F0E6FF;color:var(--purple); }
 .ch2 { background:#FFE8E8;color:var(--red); }
 .ch3 { background:#E8FFF0;color:var(--green); }
+.ch4 { background:#E8F7FF;color:#1E88E5; }
 .question-emoji { font-size:64px;text-align:center;display:block;margin-bottom:12px;animation:emoji-pop 0.5s cubic-bezier(0.34,1.56,0.64,1); }
 @keyframes emoji-pop { 0%{transform:scale(0)} 70%{transform:scale(1.2)} 100%{transform:scale(1)} }
 .question-text {
